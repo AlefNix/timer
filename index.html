@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Temporizador</title>
+	<link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+	<section class="section">
+		<div class="columns is-centered">
+			<div class="column has-text-centered">
+				<div id="contenedorInputs">
+					<div class="field">
+						<label class="label">Horas</label>
+						<div class="control">
+							<input class="input" id="horas" type="text" placeholder="Horas" onkeypress="return SomenteNumero(event)" maxlength="2" >
+						</div>
+					</div>
+					<div class="field">
+						<label class="label">Minutos</label>
+						<div class="control">
+							<input class="input" id="minutos" type="text" placeholder="Minutos"onkeypress="return SomenteNumero(event)" maxlength="2">
+						</div>
+					</div>
+					<div class="field">
+						<label class="label">Segundos</label>
+						<div class="control">
+							<input class="input" id="segundos" type="text" placeholder="Segundos" onkeypress="return SomenteNumero(event)" maxlength="2" >
+						</div>
+					</div>
+				</div>
+				<h2 id="tiempoRestante">00:00:00.0</h2>
+				<button id="btnIniciar" class="button is-success">Play<span class="mdi mdi-play"></span></button>
+				<button id="btnPausar" class="button is-success">Pause<span class="mdi mdi-pause"></span></button>
+				<button id="btnDetener" class="button is-success">Reset<span class="mdi mdi-stop"></span></button>
+				<br>
+				<a href="https://github.com/AlefNix">By Alef Bryan</a>
+			</div>
+		</div>
+	</section>
+	<script src="script.js"></script>
+	<script language="JavaScript">
+		function SomenteNumero(e){
+			var tecla=(window.event)?event.keyCode:e.which;   
+			if((tecla>47 && tecla<58)) return true;
+			else{
+				if (tecla==8 || tecla==0) return true;
+			else  return false;
+			}
+		}
+		</script>
+</body>
+
+</html>

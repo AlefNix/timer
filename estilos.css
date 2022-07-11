@@ -1,0 +1,7 @@
+h2#tiempoRestante{
+	font-size: 2rem;
+}
+
+button:hover{
+	cursor: pointer;
+}
